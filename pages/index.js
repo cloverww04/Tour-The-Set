@@ -1,11 +1,12 @@
-// import { Button } from 'react-bootstrap'; // TODO: COMMENT IN FOR AUTH
-// import { signOut } from '../utils/auth'; // TODO: COMMENT IN FOR AUTH
-// import { useAuth } from '../utils/context/authContext'; // TODO: COMMENT IN FOR AUTH
+import React from 'react';
+import { Button } from 'react-bootstrap'; // TODO: COMMENT IN FOR AUTH
+import { signOut } from '../utils/auth'; // TODO: COMMENT IN FOR AUTH
+import { useAuth } from '../utils/context/authContext'; // TODO: COMMENT IN FOR AUTH
 
 function Home() {
-  // const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
+  const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
 
-  const user = { displayName: 'Dr. T' }; // TODO: COMMENT OUT FOR AUTH
+  // const user = { displayName: 'Dr. T' };
   return (
     <div
       className="text-center d-flex flex-column justify-content-center align-content-center"
@@ -17,6 +18,8 @@ function Home() {
       }}
     >
       <h1>Hello {user.displayName}! </h1>
+      <p> click below to sign out </p>
+      <Button onClick={signOut}>Sign Out</Button>
     </div>
   );
 }
