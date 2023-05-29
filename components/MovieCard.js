@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 function MovieCard({
   id, title, poster, titleType,
 }) {
+  const slicedId = id.slice(7, 17);
   return (
     <div className="movie" key={id}>
       <Card style={{ width: '18rem', margin: '10px' }}>
@@ -12,7 +13,7 @@ function MovieCard({
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <p className="card-text bold">{titleType}</p>
-          <h1>{id}</h1>
+          <h1>{slicedId}</h1>
         </Card.Body>
       </Card>
     </div>

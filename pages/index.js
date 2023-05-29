@@ -22,7 +22,7 @@ function Home({ data }) {
     setFormInput({ ...formInput, [name]: value });
     setSearchTerm(e.target.value);
   };
-
+  // api call for search function then sets search results
   const search = async (e) => {
     e.preventDefault();
     const options = {
@@ -52,13 +52,15 @@ function Home({ data }) {
       </div>
       <div className="movie-search-results-grid">
         {searchResults.map((each) => (
-          <MovieCard key={each.id} id={each.id} title={each.title} poster={each.image.url} titleType={each.titleType} />
+          // add image url and update api quota https://rapidapi.com/apidojo/api/online-movie-database
+          <MovieCard key={each.id} id={each.id} title={each.title} poster={each.image?.url ? each.image.url : 'some image url here'} titleType={each.titleType} />
         ))}
       </div>
     </div>
   );
 }
 
+// sets server side props to pre load page with movies
 export async function getServerSideProps() {
   const url = 'https://online-movie-database.p.rapidapi.com/title/v2/find?title=brave&limit=20&sortArg=moviemeter%2Casc';
   const options = {
