@@ -31,7 +31,7 @@ body {
 
 .movie-search-results-grid {
   padding-top: 50px;
-  height: 70rem;
+  height: 60rem;
   width: 100%;
   position: relative;
 }
@@ -110,7 +110,27 @@ body {
   max-width: auto;
 }
 
-.carousel-caption h3 {
+.carousel-caption h2 {
   font-size: 35px;
   color: rgb(255, 255, 255);
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-style:oblique;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px gold;
+  }
+  
+  to {
+    text-shadow: 0 0 20px gold, 0 0 30px gold, 0 0 40px gold, 0 0 50px gold;
+  }
+}
+
+h3 {
+  animation: glow 8s infinite;
 }

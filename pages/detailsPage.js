@@ -8,7 +8,7 @@ function DetailsPage() {
   console.log(id);
   return (
     <div>
-      <h1>Movie Details</h1>
+      <h3 className="glow">Movie Details</h3>
       <MovieDetails movieId={id} />
     </div>
   );

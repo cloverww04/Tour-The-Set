@@ -63,7 +63,7 @@ function Home({ data }) {
               <Carousel.Item key={item.id.slice(7)} className="carousel-item" interval={4000}>
                 <img src={item.image?.url} alt={item.title} />
                 <Carousel.Caption className="carousel-caption">
-                  <h3>{item.title}</h3>
+                  <h2>{item.title}</h2>
                   <Button
                     onClick={() => router.push(`/detailsPage?id=${item.id.slice(7)}`)}
                     size="lg"
