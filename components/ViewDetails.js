@@ -1,17 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { clientCredentials } from '../utils/client';
 
 function MovieDetails({ movieId }) {
   const [movieData, setMovieData] = useState(null);
 
   useEffect(() => {
     const fetchMovieData = async () => {
+      const omdbUrl = clientCredentials.omdbURL;
       const url = `https://online-movie-database.p.rapidapi.com/title/get-overview-details?tconst=${movieId}`;
       const options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '85986a5db4msh517938993f594c8p13a5cejsnd77db73deb02',
+          'X-RapidAPI-Key': `${omdbUrl}`,
           'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com',
         },
       };

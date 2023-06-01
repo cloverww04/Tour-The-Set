@@ -6,8 +6,10 @@ import { Button, Carousel } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import router from 'next/router';
 import { useAuth } from '../utils/context/authContext';
+import { clientCredentials } from '../utils/client';
 
 function Home({ data }) {
+  const omdbUrl = clientCredentials.omdbURL;
   const { user } = useAuth();
   const [searchResults, setSearchResults] = useState([]);
   const [formInput, setFormInput] = useState({});
@@ -32,7 +34,7 @@ function Home({ data }) {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '85986a5db4msh517938993f594c8p13a5cejsnd77db73deb02',
+        'X-RapidAPI-Key': `${omdbUrl}`,
         'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com',
       },
     };
@@ -82,11 +84,12 @@ function Home({ data }) {
 
 // sets server side props to pre load page with movies
 export async function getServerSideProps() {
+  const omdbUrl = clientCredentials.omdbURL;
   const url = 'https://online-movie-database.p.rapidapi.com/title/find?q=brave';
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '85986a5db4msh517938993f594c8p13a5cejsnd77db73deb02',
+      'X-RapidAPI-Key': `${omdbUrl}`,
       'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com',
     },
   };
