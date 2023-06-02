@@ -19,6 +19,12 @@ export default function NavBarAuth() {
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
+            <Link passHref href="/movie/new">
+              <Nav.Link className="custom-logo">Add Movie</Nav.Link>
+            </Link>
+            <Link passHref href="/favorites">
+              <Nav.Link className="custom-logo">Favorites</Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

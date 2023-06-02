@@ -48,7 +48,7 @@ function Home({ data }) {
       <div
         className="text-center d-flex flex-column justify-content-center align-content-center"
       >
-        <h1>Hello {user.displayName}! </h1>
+        <h2>Hello {user.displayName}! </h2>
         <p>Search below for the title of your favorite movies.</p>
         <p>Click on the View Details button below the movie poster for a more in depth overview</p>
         <div>

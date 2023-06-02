@@ -31,7 +31,7 @@ body {
 
 .movie-search-results-grid {
   padding-top: 50px;
-  height: 60rem;
+  height: 61rem;
   width: 100%;
   position: relative;
 }
@@ -134,3 +134,43 @@ h3 {
 h3 {
   animation: glow 8s infinite;
 }
+
+h1 {
+  font-size: 50px;
+  font-style:oblique;
+  text-decoration: underline;
+}
+
+.card-body {
+  background: linear-gradient(to bottom right, #d5ae2e, #FFB300);
+    box-shadow: 0 0 10px 5px #ffd901;
+}
+
+.card-text {
+  display: block; 
+  width: 100%;
+  color: #000000;
+  font-weight: 700;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header-details {
+  display: block;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
