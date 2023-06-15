@@ -11,6 +11,7 @@ const clientCredentials = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
   omdbURL: process.env.NEXT_PUBLIC_OMDB_API_KEY,
+  googleApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
 };
 
 if (!firebase.apps.length) {
