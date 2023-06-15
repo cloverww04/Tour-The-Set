@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -5,6 +8,7 @@ import { v4 as uuid } from 'uuid';
 import {
   Card, Button, Row, Col,
 } from 'react-bootstrap';
+import { useRouter } from 'next/router';
 import { clientCredentials } from '../utils/client';
 import { createMovie } from '../api/firebaseData';
 import { useAuth } from '../utils/context/authContext';
@@ -14,6 +18,15 @@ function MovieDetails({ movieId }) {
   const [movieData, setMovieData] = useState(null);
   const [locations, setLocations] = useState([]);
   const { user } = useAuth();
+  const router = useRouter();
+
+  const handleLocationClick = (location) => {
+    const address = location.location;
+    router.push({
+      pathname: '/MapPage',
+      query: { address },
+    });
+  };
 
   useEffect(() => {
     const fetchMovieData = async () => {
@@ -97,15 +110,19 @@ function MovieDetails({ movieId }) {
             <Card.Body>
               <Card.Title><h1>{movieData?.title?.title}</h1></Card.Title>
               <Card.Text>
-                <h4 className="header-details">Plot Outline:</h4>
+                <span className="header-details">Plot Outline:</span>
+              </Card.Text>
+              <Card.Text>
                 {movieData?.plotOutline?.text}
               </Card.Text>
               <Card.Text>
-                <h4 className="header-details">Rating:</h4>
+                <span className="header-details">Rating:</span>
+              </Card.Text>
+              <Card.Text>
                 {movieData?.ratings?.rating}
               </Card.Text>
               <Card.Text>
-                <h4 className="header-details">Genres:</h4>
+                <span className="header-details">Genres:</span>
               </Card.Text>
               <ul>
                 {movieData?.genres?.map((genre) => (
@@ -113,17 +130,23 @@ function MovieDetails({ movieId }) {
                 ))}
               </ul>
               <div>
-                <h4 className="header-details">Filming Locations:</h4>
+                <div className="header-details">Filming Locations:</div>
                 {locations && locations.length > 0 ? (
                   <ul>
                     {locations.map((location) => (
                       <li className="header-details" key={uuid()}>
-                        <a href={location.url}>{location.location}</a>
+                        <a
+                          tabIndex="-1"
+                          onClick={() => handleLocationClick(location)}
+                          style={{ cursor: 'pointer' }}
+                        >
+                          {location.location}
+                        </a>
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p>No locations found for this film.</p>
+                  <span>No locations found for this film.</span>
                 )}
               </div>
             </Card.Body>
