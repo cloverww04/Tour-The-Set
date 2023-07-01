@@ -19,6 +19,8 @@ This web application was built as part of a school project for Nashville Softwar
 
 # Screenshots
 - ![Welcome](https://github.com/cloverww04/Team-Roster/assets/84203439/a44d55cb-0dbe-4d3e-b29f-23d301be9fcf)
+  
+- ![ViewDetails](https://github.com/cloverww04/Tour-The-Set/assets/84203439/79c1d562-480c-4d8d-9834-40458f5d1cf4)
 
 - ![Search](https://github.com/cloverww04/Team-Roster/assets/84203439/59bab283-962b-4d0e-968e-46fe54ea9740)
 
