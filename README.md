@@ -1,62 +1,31 @@
-# React/Next.js Template
+# Project Name
+Tour-The-Set
 
-[See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
+# Overview
 
-## Topics
-- [Get Started](#get-started)
-- [Starting the Project](#starting-the-project)
-- [Using axios](#using-axios)
-- [Deploying on Netlify](#deploying-on-netlify)
-___
-## Getting Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-<img width="915" alt="Screen Shot 2022-07-06 at 12 54 01 PM" src="https://user-images.githubusercontent.com/29741570/177612998-4aac9237-5a1e-4f13-8ae0-468587521564.png">
+This web application was built as part of a school project for Nashville Software School to demonstrate basic CRUD while getting familiar with external API's. It allows a user to search for a movie then view the details of that movie, and if they would like, they can click on the film locations and it displays them using a Google Maps API. The user can also add movies to their favorites list for viewing later if they would like.
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-<img width="763" alt="Screen Shot 2022-07-06 at 12 54 48 PM" src="https://user-images.githubusercontent.com/29741570/177613126-dd38f678-7553-4f27-8a4a-75680f14d71e.png">
+# Features
+- Users can create their own movies and store them with firebase
+- Read/view the movie information using RapidApi's movie data base which retrieves the information about a movie.
+- Update/edit the movie information
+- Delete movies from a favorites list
+- Display film locations using Google Maps API
 
-#### 3. Clone your new repo to your local machine
-#### 4. Go to the **NEXT** section
+# Links to the project
+[Tour-The-Set](https://github.com/cloverww04/Tour-The-Set)
+[ERD](https://lucid.app/lucidchart/invitations/accept/inv_70be997b-8b9a-4339-ae39-2844faf901f7)
+[Figma](https://www.figma.com/file/7wuoiUjXWJD3sOdgpeWp9h/Tour-The-Set?type=design&node-id=0%3A1&mode=design&t=BhVOMMhwyx5sRt4k-1)
 
-## Starting the Project
-1. Create a Firebase project and set up authentication. Use [these videos](https://vimeo.com/showcase/codetracker-firebase) as a refresher if needed.
-1. Create a `.env` file at the root of the project
-1. Copy/Paste the contents of the `.env.sample` file to your newly created `.env` file.
-1. Copy over all of your Firebase values into the `.env` file.
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. Next, run `npm run prepare`. This command sets up husky to track eslint errors on commit that will make your deploy fail on Netlify.
-1. To start your application, run `npm run dev`. THIS IS THE COMMAND YOU WILL USE TO RUN YOUR DEVELOPMENT SERVER FROM NOW ON.
-1. Open [http://localhost:3000](http://localhost:3000) with your browser.
+# Screenshots
+- ![Welcome](https://github.com/cloverww04/Team-Roster/assets/84203439/a44d55cb-0dbe-4d3e-b29f-23d301be9fcf)
 
-### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
+- ![Search](https://github.com/cloverww04/Team-Roster/assets/84203439/59bab283-962b-4d0e-968e-46fe54ea9740)
 
+- ![Favorites-hover](https://github.com/cloverww04/Team-Roster/assets/84203439/46c9fff6-f400-4429-ba4d-40f4a4710897)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- ![GoogleMaps](https://github.com/cloverww04/Team-Roster/assets/84203439/120c1459-13c7-4839-8d22-63f77a07140a)
 
-**NOTES:** 
-- If you see the following error, you did not follow all the setup steps correctly and failed to add your Firebase creds. Go back and do that NOW.
+# Profile
 
-<img width="1043" alt="Screen Shot 2022-07-06 at 11 18 45 AM" src="https://user-images.githubusercontent.com/29741570/177612501-c2628f18-4bbd-4de9-aae6-27ffba1172d6.png">
-
-### Deploying on Netlify
-Netlify will automatically detect your project and prepopulate the settings, but should something go wrong and it does not, here are the commands:
-
-- Build Command: `npm run build`
-- Publish directory: `.next`
-
-#### Additional Steps to Take on Netlify
-- Add Environmental Variables
-    - Any Enviromental variables you are using in your `.env` file should be added to Netlify. 
-        - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there.
-
-- Update Firebase URL Settings
-    - In Firebase under Authentication select sign in methods, scroll to Authorized domains. Add your Netlify URL.
-        
-## Learn More about Next.js
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Nathan Clover](https://github.com/cloverww04)
