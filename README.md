@@ -13,9 +13,9 @@ This web application was built as part of a school project for Nashville Softwar
 - Display film locations using Google Maps API
 
 # Links to the project
-[Tour-The-Set](https://github.com/cloverww04/Tour-The-Set)
-[ERD](https://lucid.app/lucidchart/invitations/accept/inv_70be997b-8b9a-4339-ae39-2844faf901f7)
-[Figma](https://www.figma.com/file/7wuoiUjXWJD3sOdgpeWp9h/Tour-The-Set?type=design&node-id=0%3A1&mode=design&t=BhVOMMhwyx5sRt4k-1)
+- [Tour-The-Set](https://github.com/cloverww04/Tour-The-Set)
+- [ERD](https://lucid.app/lucidchart/invitations/accept/inv_70be997b-8b9a-4339-ae39-2844faf901f7)
+- [Figma](https://www.figma.com/file/7wuoiUjXWJD3sOdgpeWp9h/Tour-The-Set?type=design&node-id=0%3A1&mode=design&t=BhVOMMhwyx5sRt4k-1)
 
 # Screenshots
 - ![Welcome](https://github.com/cloverww04/Team-Roster/assets/84203439/a44d55cb-0dbe-4d3e-b29f-23d301be9fcf)
